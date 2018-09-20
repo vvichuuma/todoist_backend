@@ -70,6 +70,20 @@ class Api::TasksController < ApplicationController
   end 
 
 
+  def geolocation
+
+
+      lat = params['lat']
+      lng = params['lng']
+
+    response = Unirest.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{lat},#{lng}&key=#{ENV["API_GEO"]}")
+
+
+    render json: response.body
+
+  end 
+
+
 
   def destroy 
 

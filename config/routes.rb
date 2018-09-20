@@ -65,6 +65,14 @@ Rails.application.routes.draw do
     delete "/deltas/:id" => "tasks#deltas"
 
 
+
+    #get Geolocation
+
+    post "/locate" => "tasks#geolocation"
+
+
+
+
    end 
 
 
